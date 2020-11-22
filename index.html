@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de Datos</title>
+    <link rel="icon" type="image/png" href="https://image.flaticon.com/icons/png/512/1420/1420398.png" />
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div id="post" class="fild">
+        <form method="POST" action="facade/user_facade.php?action=insert">
+            <label>Ingresa información:</label>
+            <input type="text" name="name" placeholder="Nickname">
+            <input type="submit" value="sentForm">
+        </form>
+    </div>
+
+    <div id="get" class="fild">
+        <form method="GET" action="facade/user_facade.php?action=select">
+            <label>Obtener información:</label>
+            <input type="submit" value="get">
+        </form>
+    </div>
+
+    <div id="update" class="fild">
+        <form method="POST" action="facade/user_facade.php?action=update">
+            <label>Ingresa información:</label>
+            <input type="text" name="idUser" placeholder="idUser">
+            <input type="text" name="score" placeholder="score">
+            <input type="submit" value="updateForm">
+        </form>
+    </div>
+
+    <div id="delete" class="fild">
+        <form method="POST" action="facade/user_facade.php?action=delete">
+            <label>Ingresa información:</label>
+            <input type="text" name="idUser" placeholder="idUser">
+            <input type="submit" value="delete">
+        </form>
+    </div>
+
+    
+</body>
+
+</html>
