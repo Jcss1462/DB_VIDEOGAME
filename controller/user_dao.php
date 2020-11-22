@@ -38,6 +38,7 @@ class UserDao extends DAO{
         $SQL ="SELECT `idUser`, `nickname`, `score` FROM `user` ORDER BY score DESC";
         echo $SQL;
         echo  "<br>";
+        echo  "<br>";
 
         try{
             $result = array();
@@ -56,7 +57,7 @@ class UserDao extends DAO{
             }
             //MUESTRO LOS DATOS
             foreach ($result as &$idx) {
-                echo $idx->_GET("nickname");
+                echo $idx->_GET("nickname").":       ".$idx->_GET("score");
                 echo  "<br>";
             }
             
