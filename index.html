@@ -11,39 +11,47 @@
 
 <body>
 
-    <div id="post" class="fild">
-        <form method="POST" action="facade/user_facade.php?action=insert">
-            <label>Ingresa información:</label>
-            <input type="text" name="name" placeholder="Nickname">
-            <input type="submit" value="sentForm">
-        </form>
+    <div id="backgroud">
+
+        <div id="post" class="fild">
+            <form method="POST" action="facade/user_facade.php?action=insert">
+                <h2>Post</h2>
+                <label>Ingresa información:</label>
+                <input type="text" name="name" placeholder="Nickname">
+                <input type="submit" value="sentForm">
+            </form>
+        </div>
+
+        <div id="get" class="fild">
+            <h2>Get</h2>
+            <form method="POST" action="facade/user_facade.php?action=select">
+                <label>Obtener información:</label>
+                <input type="submit" value="get">
+            </form>
+        </div>
+
+        <div id="update" class="fild">
+            <h2>Put</h2>
+            <form method="POST" action="facade/user_facade.php?action=update">
+                <label>Ingresa información:</label>
+                <input type="text" name="idUser" placeholder="idUser">
+                <input type="text" name="score" placeholder="score">
+                <input type="submit" value="updateForm">
+            </form>
+        </div>
+
+        <div id="delete" class="fild">
+            <h2>Delete</h2>
+            <form method="POST" action="facade/user_facade.php?action=delete">
+                <label>Ingresa información:</label>
+                <input type="text" name="idUser" placeholder="idUser">
+                <input type="submit" value="delete">
+            </form>
+        </div>
+
     </div>
 
-    <div id="get" class="fild">
-        <form method="POST" action="facade/user_facade.php?action=select">
-            <label>Obtener información:</label>
-            <input type="submit" value="get">
-        </form>
-    </div>
 
-    <div id="update" class="fild">
-        <form method="POST" action="facade/user_facade.php?action=update">
-            <label>Ingresa información:</label>
-            <input type="text" name="idUser" placeholder="idUser">
-            <input type="text" name="score" placeholder="score">
-            <input type="submit" value="updateForm">
-        </form>
-    </div>
-
-    <div id="delete" class="fild">
-        <form method="POST" action="facade/user_facade.php?action=delete">
-            <label>Ingresa información:</label>
-            <input type="text" name="idUser" placeholder="idUser">
-            <input type="submit" value="delete">
-        </form>
-    </div>
-
-    
 </body>
 
 </html>

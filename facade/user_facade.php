@@ -15,6 +15,7 @@
     switch ($_REQUEST['action']) {
         case 'insert':
             //seteo los valores
+            header("Location: http://localhost/DB_VIDEOGAME/");
             $ent->_SET('nickname',$_REQUEST['name']);
             $ent->_SET('score',0);
             echo 'this is the case x: insert'; 
@@ -25,13 +26,15 @@
             echo 'this is the case x: select'; 
         break;
         case 'update':
+            header("Location: http://localhost/DB_VIDEOGAME/");
             $ent->_SET('idUser',$_REQUEST['idUser']);
             $ent->_SET('score',$_REQUEST['score']);
-            echo $ent->_GET('score');
+            //echo $ent->_GET('score');
             $controller->update($ent);
             echo 'this is the case x: update'; 
         break;
         case 'delete':
+            header("Location: http://localhost/DB_VIDEOGAME/");
             $ent->_SET('idUser',$_REQUEST['idUser']);
             //echo $ent->_GET('idUser'); 
             $controller->delete($ent);
