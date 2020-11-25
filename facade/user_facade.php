@@ -2,7 +2,7 @@
     require_once('../model/user_entity.php');
     //traigo el controller
     require_once('../controller/user_dao.php');
-    echo '<h1>THIS IS THE FACADE</h1>';
+    //echo '<h1>THIS IS THE FACADE</h1>';
     /*******************************
         variables iniciales
      ***************************** */
@@ -22,8 +22,13 @@
             $controller->insert($ent);  
         break;
         case 'select':
-            $controller->select($ent);  
-            echo 'this is the case x: select'; 
+            $data=$controller->select($ent);  
+            //echo 'this is the case x: select'; 
+            //echo '<script> console.log('. json_encode( $data ) .') </script>';
+            foreach ($data as &$idx) {
+                echo $idx->_GET("iduser").":".$idx->_GET("nickname").":".$idx->_GET("score");
+                echo  "<br>";
+            }
         break;
         case 'update':
             header("Location: http://localhost/DB_VIDEOGAME/");

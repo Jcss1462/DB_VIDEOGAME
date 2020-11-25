@@ -36,9 +36,8 @@ class UserDao extends DAO{
 
     public function select(){
         $SQL ="SELECT `idUser`, `nickname`, `score` FROM `user` ORDER BY score DESC";
-        echo $SQL;
-        echo  "<br>";
-        echo  "<br>";
+        //echo $SQL;
+        
 
         try{
             $result = array();
@@ -54,11 +53,6 @@ class UserDao extends DAO{
                 $std->_SET('score',   $r->score);
                 
                 $result[] = $std;
-            }
-            //MUESTRO LOS DATOS
-            foreach ($result as &$idx) {
-                echo $idx->_GET("nickname").":       ".$idx->_GET("score");
-                echo  "<br>";
             }
             
             return $result;  // 3. Retornar el result

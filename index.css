@@ -1,3 +1,5 @@
+
+
 body{
     background-color: rgb(107, 22, 187);
     width: 100vw-10;
@@ -14,7 +16,7 @@ body{
 }
 
 #backgroud{
-    margin-top: 10%;
+    margin-top: 5%;
     box-sizing: border-box;
     width: 90%;
     height: 90%;
@@ -27,7 +29,7 @@ body{
    
     border-top: 0.5px solid rgb(109, 109, 109); 
     box-sizing: border-box;
-    height: 150px;
+    min-height: 150px;
 }
 
 input[type=submit] {
@@ -51,5 +53,53 @@ input[type=text]{
     padding: 5px;
     width: 100px;
     border-radius: 5px;
-    border: 0.5px solid rgb(109, 109, 109); ;
+    border: 0.5px solid rgb(109, 109, 109); 
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+tr{
+    border-collapse: collapse;
+}
+td{
+    text-align: center;
+    padding: 3px; 
+}
+
+th{
+    background-color: #fffb07;
+    color: black;
+}
+
+#get{
+    min-height: 300px;
+}
+
+#tablebox{
+    height:150px;
+    overflow:auto;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }
